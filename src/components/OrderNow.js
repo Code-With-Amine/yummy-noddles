@@ -4,7 +4,7 @@ import '../styles/order.scss'
 function OrderNow() {
   return (
     <div className='Order'>
-        <h2 className='Order--header'>Order Now</h2>
+        <h3 className='Order--header'>Order Now</h3>
         <CTA />
     </div>
   )

@@ -1,0 +1,33 @@
+@mixin padding{
+    padding: 20px 0px;
+}
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0px;
+
+
+    &--title{
+        text-align: center;
+        @include padding;
+
+        &::after{
+            content: '';
+            height: 3px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #E38415;
+            display: block;
+    }
+    }
+    &--description{
+        @include padding;
+    }
+    &__highlight{
+        font-weight: bolder;
+        font-family: italic;
+        font-size: 1.3rem;
+    }
+}

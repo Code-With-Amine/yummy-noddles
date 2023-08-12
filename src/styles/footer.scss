@@ -1,0 +1,21 @@
+.footer{
+    padding: 18px 22px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+
+    &--socialMedia > i{
+        padding: 0px 12px;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+    &--contactInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        cursor: pointer;
+    }
+}

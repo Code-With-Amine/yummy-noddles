@@ -1,0 +1,30 @@
+@mixin padding{
+    padding: 20px 0px;
+}
+
+.socilas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 22px;
+    max-width: 90%;
+    margin: 0 auto;
+    @include padding;
+
+    &--image{
+        width: 80%;
+    }
+
+    &--title{
+    @include padding;
+    text-align: center;
+        &::after{
+            content: '';
+            height: 3px;
+            width: 20%;
+            margin: 0 auto;
+            background-color: #E38415;
+            display: block;
+    }
+}
+}

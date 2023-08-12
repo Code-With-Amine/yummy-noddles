@@ -1,0 +1,23 @@
+@mixin padding{
+    padding: 20px 0px;
+}
+.craft-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0px;
+    &--header{
+        @include padding;
+        &::after{
+            content: '';
+            height: 3px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #E38415;
+            display: block;
+           }
+    }
+    &--description{
+        @include padding;
+    }
+}
