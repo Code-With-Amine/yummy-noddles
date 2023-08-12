@@ -1,0 +1,44 @@
+$underline: #E38415;
+
+nav{
+    width: 100%;
+    .navBar{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 52px;
+        padding: 12px 22px;
+    }
+    .NavBare--logo{
+            width: 100px;
+            height: 100px;
+    }
+    .NavBare--item{
+        list-style: none;
+        & a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        a::after{
+            content: '';
+            height: 2px;
+            width: 0%;
+            background-color: $underline;
+            display: block;
+            transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -ms-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+}
+        a:hover::after{
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: $underline;
+            display: block;
+        }
+    }
+
+}

@@ -1,0 +1,38 @@
+@mixin padding{
+    padding: 20px 0px;
+}
+
+.locations-container{    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.location{
+    &--image{
+        width: 80%;
+        height: 60%;
+    }
+    &--place{
+        @include padding;
+        font-family: italic;
+    }
+    &--title{
+        @include padding;
+    }
+}
+
+.locations--header {
+    @include padding;
+    text-align: center;
+   &::after{
+    content: '';
+    height: 3px;
+    width: 10%;
+    margin: 0 auto;
+    background-color: #E38415;
+    display: block;
+   }
+}

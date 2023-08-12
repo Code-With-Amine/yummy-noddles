@@ -1,0 +1,22 @@
+$hightlight-text: #E70404;
+
+.IntroSection{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20%;
+    margin-bottom: 70px;
+
+    &--heading{
+        padding-bottom: 30px;
+    }
+
+    &--highlightText{
+        color: $hightlight-text;
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+}

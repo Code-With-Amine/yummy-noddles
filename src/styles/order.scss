@@ -1,0 +1,12 @@
+.Order{
+    background-color: #FE5D03;
+    padding: 22px opx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--header{
+        color: white;
+        text-align: center;
+    }
+}
