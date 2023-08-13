@@ -1,0 +1,57 @@
+$MenuBackGround: #FFFFFF;
+@mixin centerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.MenuSec{
+    @include centerContent();
+
+}
+.MenuContent{
+    background-color: $MenuBackGround;
+    @include centerContent();
+    width: 90%;
+    margin: 15px auto;
+
+    &--logo{
+        display: block;
+        max-width: 50%;
+        margin: 20px auto;
+    }
+    &--image{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+    &--description{
+        text-align: center;
+    }
+
+    &--header{
+        text-align: center;
+        margin-top: 50px;
+        &::after{
+         content: '';
+         height: 3px;
+         width: 100%;
+         margin: 0 auto;
+         background-color: #E38415;
+         display: block;
+        }
+    }
+
+}
+
+.MenuContentContainer{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0px;
+}
