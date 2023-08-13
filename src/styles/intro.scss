@@ -1,4 +1,15 @@
 $hightlight-text: #E70404;
+$tabletBreakPpint: 768px;
+$smartPhneBreakPoint: 320px;
+
+@mixin Responsive($breakPoint) {
+    @media screen and (max-width: $breakPoint) {
+        .IntroSection {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
 
 .IntroSection{
     display: flex;
@@ -20,3 +31,5 @@ $hightlight-text: #E70404;
         height: 100%;
     }
 }
+
+@include Responsive($tabletBreakPpint);

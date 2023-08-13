@@ -1,13 +1,43 @@
 $underline: #E38415;
+$tabletBreakPpint: 768px;
+$smartPhneBreakPoint: 452px;
+
+
+@mixin Responsive($breakPoint) {
+    @media screen and (max-width: $breakPoint) {
+        #displayNavBar{
+            display: flex!important;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+        .navBar{
+            display: none!important;
+        
+        &--open , &--close {
+            display: block!important;
+        }
+       
+    }
+}
+}
 
 nav{
     width: 100%;
+
     .navBar{
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 52px;
         padding: 12px 22px;
+
+            &--open, &--close{
+                display: none;
+                width: 20px;
+                margin: 30px auto;
+                font-size: 1.6rem;
+}
     }
     .NavBare--logo{
             width: 100px;
@@ -42,3 +72,5 @@ nav{
     }
 
 }
+
+@include Responsive($smartPhneBreakPoint);

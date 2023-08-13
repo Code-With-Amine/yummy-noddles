@@ -5,7 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 70px 0px;
+    margin: 70px auto;
+    text-align: center;
+    max-width: 80%;
+
     &--header{
         @include padding;
         &::after{

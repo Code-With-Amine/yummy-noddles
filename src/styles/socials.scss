@@ -1,6 +1,19 @@
+$tabletBreakPpint: 768px;
+$smartPhneBreakPoint: 320px;
+
 @mixin padding{
     padding: 20px 0px;
 }
+
+@mixin Responsive($breakPoint) {
+    @media screen and (max-width: $breakPoint) {
+        .socilas {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
 
 .socilas{
     display: grid;
@@ -28,3 +41,5 @@
     }
 }
 }
+
+@include Responsive($tabletBreakPpint);

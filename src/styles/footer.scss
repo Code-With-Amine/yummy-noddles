@@ -1,3 +1,22 @@
+$tabletBreakPpint: 768px;
+$smartPhneBreakPoint: 320px;
+
+@mixin display{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@mixin Responsive($breakPoint) {
+    @media screen and (max-width: $breakPoint) {
+        .footer {
+           flex-direction: column;
+           align-items: center;
+           gap: 30px;
+           justify-content: flex-start;
+        }
+    }
+}
+
 .footer{
     padding: 18px 22px;
     background-color: #000;
@@ -5,17 +24,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30%;
+    gap: 26%;
 
-    &--socialMedia > i{
-        padding: 0px 12px;
-        font-size: 1.4rem;
-        cursor: pointer;
+    &--socialMedia{
+        @include display;
+        i{
+            padding: 0px 12px;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
     }
     &--contactInfo{
         display: flex;
         flex-direction: column;
         gap: 23px;
         cursor: pointer;
+        
+        &:first-child{
+            @include display;
+        }
     }
 }
+
+@include Responsive($tabletBreakPpint);
