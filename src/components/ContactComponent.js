@@ -1,15 +1,14 @@
 import React from 'react'
 import OrderNow from './OrderNow'
-import Menu from './Menu'
+import Maps from './Maps'
 
-
-function MenuComponent() {
+function ContactComponent() {
   return (
     <>
     <OrderNow />
-    <Menu />
+    <Maps />
     </>
   )
 }
 
-export default MenuComponent
+export default ContactComponent
