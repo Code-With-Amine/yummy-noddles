@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import logo from '../images/logo.png'
+import { NavLink } from 'react-router-dom';
 import '../styles/navBar.scss'
 
 function NavBar() {
@@ -15,15 +16,17 @@ function NavBar() {
   const navID = classState ? 'displayNavBar' : null
   
   return (
+
     <nav >
         {currentBar}
         <ul className= 'navBar' id={navID}>
         <li className='NavBare--item'><img src={logo} alt='logo' className='NavBare--logo' /></li>
-        <li className='NavBare--item'><a href='#'>Home</a></li>
-        <li className='NavBare--item'><a href='#'>Menu</a></li>
-        <li className='NavBare--item'><a href='#'>Contact</a></li>
+        <li className='NavBare--item'><NavLink to='/' className='NavBare--Link' >Home</NavLink></li>
+        <li className='NavBare--item'><NavLink to='/Menu'className='NavBare--Link' >Menu</NavLink></li>
+        <li className='NavBare--item'><NavLink to='/Contact'className='NavBare--Link' >Contact</NavLink></li>
         </ul>
     </nav>
+
   );
 }
 
