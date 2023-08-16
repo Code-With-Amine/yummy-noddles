@@ -1,8 +1,12 @@
 $underline: #E38415;
+$NavBarBackground: #ffffff;
 $tabletBreakPpint: 768px;
 $smartPhneBreakPoint: 452px;
 
+@mixin Shadow(){
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
+}
 @mixin Responsive($breakPoint) {
     @media screen and (max-width: $breakPoint) {
         #displayNavBar{
@@ -24,24 +28,36 @@ $smartPhneBreakPoint: 452px;
 
 nav{
     width: 100%;
+    position: sticky;
+    top: 0;
+    @include Shadow;
 
     .navBar{
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin-bottom: 22px;
         gap: 52px;
-        padding: 12px 22px;
+        padding: 8px 22px;
 
             &--open, &--close{
                 display: none;
                 width: 20px;
                 margin: 30px auto;
                 font-size: 1.6rem;
-}
+            }
+            &__sticking{
+                background-color: $NavBarBackground;
+                transition: background-color 500ms;
+                -webkit-transition: background-color 500m;
+                -moz-transition: background-color 500m;
+                -ms-transition: background-color 500m;
+                -o-transition: background-color 500m;
+            }
     }
     .NavBare--logo{
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 60px;
     }
     .NavBare--item{
         list-style: none;
@@ -72,5 +88,32 @@ nav{
     }
 
 }
+
+.navBar__sticking{
+    display: flex;
+    justify-content: center;
+    @include Shadow;
+    background-color: $NavBarBackground;
+    transition: background-color 500ms;
+    -webkit-transition: background-color 500m;
+    -moz-transition: background-color 500m;
+    -ms-transition: background-color 500m;
+    -o-transition: background-color 500m;
+
+    .navBar{
+        padding: 20px 12px;
+        margin-bottom: 22px;
+
+        .NavBare--Link{
+            color: #110101;
+        }
+    }
+    .NavBare--logo{
+        position: fixed;
+        top: 8px;
+        left: 8px;
+    }
+}
+
 
 @include Responsive($smartPhneBreakPoint);
