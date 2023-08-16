@@ -1,5 +1,20 @@
 $background-color: #F3F3F3;
 $CTA-color: #000;
+$duration: 2s;
+
+@mixin animation($trnstalePro, $opactyVal){
+    opacity: $opactyVal;
+    transform: $trnstalePro;
+    -webkit-transform: $trnstalePro;
+    -moz-transform: $trnstalePro;
+    -ms-transform: $trnstalePro;
+    -o-transform: $trnstalePro;
+}
+
+@mixin animationValues{
+    animation-duration: $duration;
+    animation-fill-mode: forwards; /* Keep the final animation state */
+}
 
 
 *{
@@ -8,6 +23,7 @@ $CTA-color: #000;
     padding: 0;
     font-family: sans-serif;
 }
+
 
 body{
     background-color: $background-color;
@@ -21,4 +37,61 @@ body{
     display: block;
     margin-top: 16px;
     cursor: pointer;
+}
+
+
+.animate.location__animate-1, .animate.socilas__animate-1{
+    animation-name: leftToWright;
+    @include animationValues;
+    @include animation(translateX(-100%), 0);
+
+}
+
+@keyframes leftToWright{
+
+to{
+    @include animation(translateX(0%), 1);
+
+}
+    
+}
+
+.animate.location__animate-2, .animate.socilas__animate-2{
+    animation-name: topToBottom;
+    @include animationValues;
+    @include animation(translateY(-100%), 0);
+
+}
+
+@keyframes topToBottom{
+
+to{
+    @include animation(translateY(0%), 1);
+
+}
+    
+}
+
+.animate.location__animate-3, .animate.socilas__animate-3{
+    animation-name: rightToLeft;
+    @include animationValues;
+    @include animation(translateX(100%), 0);
+
+}
+
+@keyframes rightToLeft{
+
+to{
+    @include animation(translateX(0%), 1);
+
+}
+    
+}
+
+.animate.locations--header__animate{
+   
+        animation-name: topToBottom;
+        @include animationValues;
+        @include animation(translateY(-100%), 0);
+    
 }

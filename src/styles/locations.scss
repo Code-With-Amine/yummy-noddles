@@ -1,6 +1,9 @@
+
+
 @mixin padding{
     padding: 20px 0px;
 }
+
 
 .locations-container{    
     display: grid;
@@ -24,6 +27,7 @@
     &--title{
         @include padding;
     }
+
 }
 
 .locations--header {

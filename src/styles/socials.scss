@@ -1,45 +1,45 @@
 $tabletBreakPpint: 768px;
 $smartPhneBreakPoint: 320px;
 
-@mixin padding{
-    padding: 20px 0px;
+@mixin padding {
+  padding: 20px 0px;
 }
 
 @mixin Responsive($breakPoint) {
-    @media screen and (max-width: $breakPoint) {
-        .socilas {
-            display: flex;
-            flex-wrap: wrap;
-        }
+  @media screen and (max-width: $breakPoint) {
+    .socilas {
+      display: flex;
+      flex-wrap: wrap;
     }
+  }
 }
 
+.socilas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 22px;
+  max-width: 90%;
+  margin: 0 auto;
+  @include padding;
 
-.socilas{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap: 22px;
-    max-width: 90%;
-    margin: 0 auto;
-    @include padding;
+  &--image {
+    width: 80%;
+}
 
-    &--image{
-        width: 80%;
-    }
-
-    &--title{
+  &--title {
     @include padding;
     text-align: center;
-        &::after{
-            content: '';
-            height: 3px;
-            width: 20%;
-            margin: 0 auto;
-            background-color: #E38415;
-            display: block;
+    &::after {
+      content: "";
+      height: 3px;
+      width: 20%;
+      margin: 0 auto;
+      background-color: #e38415;
+      display: block;
     }
+  }
 }
-}
+
 
 @include Responsive($tabletBreakPpint);
