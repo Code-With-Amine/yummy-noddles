@@ -27,6 +27,45 @@ $duration: 2s;
 
 body{
     background-color: $background-color;
+    cursor: none;
+}
+
+.cursor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+    background-color: #00000000;
+    box-shadow: 12px 12px 18px black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    pointer-events: none;
+    backdrop-filter: blur();
+}
+.cursor__order{
+    display: none;
+    font-size: 1rem;
+    color: #F3F3F3;
+}
+.CTA-Btn__cursor{
+    cursor: none !important;
+    background-color: #c2c2c200;
+    z-index: 999;
+    box-shadow: #000;
+    & .cursor__order{
+        display: none!important;
+    }
 }
 
 .CTA-Btn{

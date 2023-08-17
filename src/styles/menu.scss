@@ -20,7 +20,10 @@ $MenuBackGround: #FFFFFF;
         display: block;
         max-width: 50%;
         margin: 20px auto;
-    }
+        animation: rotateAnimation 1s ease-in-out forwards;
+        -webkit-animation: rotateAnimation 1s ease-in-out forwards;
+}
+    
     &--image{
         width: 80px;
         height: 80px;
@@ -29,6 +32,19 @@ $MenuBackGround: #FFFFFF;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+        transition: 1s ease-in-out;
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -ms-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+
+        &:hover{
+            transform: scale(2) translate(50%,-50%);
+            -webkit-transform: scale(2) translate(50%,-50%);
+            -moz-transform: scale(2) translate(50%,-50%);
+            -ms-transform: scale(2) translate(50%,-50%);
+            -o-transform: scale(2) translate(50%,-50%);
+}
 }
     &--description{
         text-align: center;
@@ -54,4 +70,21 @@ $MenuBackGround: #FFFFFF;
     align-items: center;
     gap: 30px;
     padding: 40px 0px;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: scale(3) rotate(0deg);
+        -webkit-transform: scale(3) rotate(0deg);
+        -moz-transform: scale(3) rotate(0deg);
+        -ms-transform: scale(3) rotate(0deg);
+        -o-transform: scale(3) rotate(0deg);
+}
+    100% {
+        transform: scale(1) rotate(360deg);
+        -webkit-transform: scale(1) rotate(360deg);
+        -moz-transform: scale(1) rotate(360deg);
+        -ms-transform: scale(1) rotate(360deg);
+        -o-transform: scale(1) rotate(360deg);
+}
 }
