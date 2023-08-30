@@ -1,6 +1,7 @@
 import React from 'react'
 import CTA from './CTA'
 import logo from '../images/logo.png'
+import Shap_1 from '../images/graph 1.png'
 import '../styles/intro.scss'
 
 function Intro() {
@@ -11,8 +12,9 @@ function Intro() {
                 <p>the most <span className='IntroSection--highlightText'>yummy</span> Noodles of Paris</p>
                 <CTA />
             </div>
-            <div>
-                <img src={logo} className='InroSection__image'/>
+            <div className='InroSection__imagesContainer'>
+                <img src={Shap_1} alt='shap' className='IntroSection__ImageShap_1' />
+                <img src={logo} alt='logo' className='InroSection__image'/>
             </div>
         </div>
     )

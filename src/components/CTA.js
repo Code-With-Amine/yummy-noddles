@@ -1,9 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
+
 
 function CTA() {
   return (
-    <button className='CTA-Btn'>Click & Collect
-    </button>
+    <NavLink to='/Order' className='CTA-Btn'>Click & Collect
+    </NavLink>
 
   )
 }

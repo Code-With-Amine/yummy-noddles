@@ -12,7 +12,7 @@ function Menu() {
       <img src={logo} alt="logo" className="MenuContent--logo" />
 
         <h3 className="MenuContent--header">Starters</h3>
-        {Starters.map(({ dish, description, imagURL }) => (
+        {Starters.id.map(({ dish, description, imagURL }) => (
           <>
             <div className="MenuContentContainer">
               <img src={imagURL} alt={dish} key={dish} className="MenuContent--image" />
@@ -22,7 +22,7 @@ function Menu() {
           </>
         ))}
         <h3 className="MenuContent--header">Main Course</h3>
-        {MainCourse.map(({ dish, description, imagURL }) => (
+        {MainCourse.id.map(({ dish, description, imagURL }) => (
           <>
             <div className="MenuContentContainer">
               <img src={imagURL} alt={dish} key={dish} className="MenuContent--image" />
@@ -33,7 +33,7 @@ function Menu() {
         ))}
         
         <h3 className="MenuContent--header">Desserts</h3>
-        {desserts.map(({ dish, description, imagURL }) => (
+        {desserts.id.map(({ dish, description, imagURL }) => (
           <>
             <div className="MenuContentContainer">
               <img src={imagURL} alt={dish} key={dish} className="MenuContent--image" />
@@ -44,7 +44,7 @@ function Menu() {
         ))}
 
     <h3 className="MenuContent--header">Drinks</h3>
-        {drinks.map(({ drinkName, imagURL }) => (
+        {drinks.id.map(({ drinkName, imagURL }) => (
             <div className="MenuContentContainer">
               <img src={imagURL} alt={drinkName} key={drinkName} className="MenuContent--image" />
               <h2 className="MenuContent--dishName">{drinkName}</h2>

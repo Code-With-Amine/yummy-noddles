@@ -28,6 +28,7 @@ $duration: 2s;
 body{
     background-color: $background-color;
     cursor: none;
+    overflow-x: hidden;
 }
 
 .cursor{
@@ -70,6 +71,8 @@ body{
 
 .CTA-Btn{
     background-color: $CTA-color;
+    text-decoration: none;
+    text-align: center;
     padding: 8px 20px;
     color: #F3F3F3;
     border: none;

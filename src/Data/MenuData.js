@@ -1,5 +1,7 @@
-export const Starters = [
-  {
+export const Starters = {
+  name : "Starters",
+  id : [
+    {
     dish: "Vegetarian dumplings",
     description: "Dumplings stuffed with corn and mushrooms",
     imagURL:
@@ -19,9 +21,12 @@ export const Starters = [
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.easytourchina.com%2Fimages%2FPhoto%2Fsteam-bun-china-s-most-popular-breakfast%2Fp931_d20160118143703.jpg&f=1&nofb=1&ipt=883bb5c04e49893a4c4af81cb1adfa916ec6604c3c54e053df5293f1b84bc8c3&ipo=images",
     price: "$9.75",
-  },
-];
-export const MainCourse = [
+  },]
+};
+
+export const MainCourse = {
+  name: 'MainCourse',
+  id: [
   {
     dish: "Vegetarian biang biang noodles",
     description: "Thick handmade noodles served with broth",
@@ -42,22 +47,24 @@ export const MainCourse = [
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fnoodle%2Fnoodle_PNG15.png&f=1&nofb=1&ipt=c1adb7f08feb5536375f40ea1335ed5bfa4c98948e9843ec1a9a6c3c68406f02&ipo=images",
     price: "$10.50",
-  },
-];
+  },]
+};
 
-export const desserts = [
-  {
+export const desserts = {
+  name: 'desserts',
+  id: [{
     dish: "Tofu pudding",
     description: "Silken tofu bathed in ginger syrup",
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meetfresh.us%2Fwp-content%2Fuploads%2F2019%2F10%2Fe13ee4c1-ead8-4b37-b46e-4786286c8595.png&f=1&nofb=1&ipt=4bce1be581f40f40c1e66e4cbff7b504eff98e96bd516d7e152e56b6ccc33775&ipo=images",
 
     price: "$5.99",
-  },
-];
+  },]
+};
 
-export const drinks = [
-  {
+export const drinks = {
+ name: 'drinks',
+  id: [ {
     drinkName: "Taïwan Beer",
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.monde-selection.com%2Fwp-content%2Fuploads%2F2020%2F05%2F_XT211191.png&f=1&nofb=1&ipt=8d76cbde0ec0baf7d42b00edd4806a2347cfdc67f251d1a6af93906e28b3cebc&ipo=images",
@@ -74,5 +81,5 @@ export const drinks = [
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F5%2FOolong-Tea-PNG-High-Quality-Image.png&f=1&nofb=1&ipt=c497e55b12861bce51f38cb61af1c912edb366d83ae88cb7c1961221f2afd312&ipo=images",
     price: "$2.99",
-  },
-];
+  },]
+};
