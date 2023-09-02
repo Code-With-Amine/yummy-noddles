@@ -1,3 +1,12 @@
+const smallerDishes = (Hovered)=>{
+  const dishes = document.querySelectorAll('.SelectedImages-container')
+  dishes.forEach((dish) => {
+    // if it's not the hovered element then make it smaller
+    if(dish.dataset.dish !== Hovered.dataset.dish){
+      dish.classList.toggle('SelectedImages__Smallerscal')
+    }
+  })
+}
 
 const ShowDishInfo = (e, setChosenCat) => {
   const HoveredElement = e.currentTarget;
@@ -15,6 +24,11 @@ const ShowDishInfo = (e, setChosenCat) => {
     HoveredElement.appendChild(DishInfoContainer)
     DishInfoContainer.appendChild(Btn)
     BackgoundCercle.style.display = 'none';
+    HoveredElement.style.backgroundColor = '#FE5D03';
+    
+    // make the other dishes smaller campared to the hovered dish
+    smallerDishes(HoveredElement)
+    
     Btn.addEventListener('click', ()=>{
       const newDish = {
         name: dishName,
@@ -27,12 +41,12 @@ const ShowDishInfo = (e, setChosenCat) => {
     })
 
     HoveredElement.addEventListener('mouseleave', () => {
+
+      smallerDishes(HoveredElement)
+      HoveredElement.style.backgroundColor = '';
       BackgoundCercle.style.display = 'block';
         Btn.remove()
        DishInfoContainer.remove()
-
-
-
     } )
 
 
@@ -45,11 +59,12 @@ const ShowSelectedCategory = ({ SelcetCategory, setChosenCat }) => {
   return (
     <div className='SelectedImages'>
       {
-      SelcetCategory.id.map(({ imagURL, dish, description, price}, index) => (
-        <div className='SelectedImages-container' data-description={description} data-price={price} data-dish={dish} key={index} 
+      SelcetCategory.id.map(({ imagURL, dish, description, price, key}) => (
+        <div className='SelectedImages-container' data-description={description} data-price={price} data-dish={dish} key={key} 
           onMouseEnter={(event) => ShowDishInfo(event, setChosenCat)}
         >
-          <div className='SelectedImages__bgColor'></div>
+         <div className='SelectedImages__bgColor'></div>
+  
           <img src={imagURL} alt={dish} className='SelectedImages--DishImage'  key={dish}/>
         </div>
       ))}

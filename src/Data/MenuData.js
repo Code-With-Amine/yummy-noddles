@@ -2,6 +2,7 @@ export const Starters = {
   name : "Starters",
   id : [
     {
+    key: '54df',
     dish: "Vegetarian dumplings",
     description: "Dumplings stuffed with corn and mushrooms",
     imagURL:
@@ -9,6 +10,7 @@ export const Starters = {
     price: 8.99,
   },
   {
+    key: '90kd',
     dish: "Fried tofu",
     description: "Taiwanese Fried Tofu",
     imagURL:
@@ -16,6 +18,7 @@ export const Starters = {
     price: 6.50,
   },
   {
+    key: '78so',
     dish: "Chinese steamed bun (truffle)",
     description: "Chinese steamed bun stuffed with meat",
     imagURL:
@@ -28,6 +31,7 @@ export const MainCourse = {
   name: 'MainCourse',
   id: [
   {
+    key: '09od7',
     dish: "Vegetarian biang biang noodles",
     description: "Thick handmade noodles served with broth",
     imagURL:
@@ -35,6 +39,7 @@ export const MainCourse = {
     price: 12.99,
   },
   {
+    key: '89wh2e',
     dish: "Beef noodle soup",
     description: "Homemade noodles in a slightly spicy broth",
     imagURL:
@@ -42,6 +47,7 @@ export const MainCourse = {
     price: 14.25,
   },
   {
+    key: '9j6kd3',
     dish: "Cold sesame noodles",
     description: "Cold noodles with chicken, sesame sauce",
     imagURL:
@@ -53,6 +59,7 @@ export const MainCourse = {
 export const desserts = {
   name: 'desserts',
   id: [{
+    key: '123hjkd',
     dish: "Tofu pudding",
     description: "Silken tofu bathed in ginger syrup",
     imagURL:
@@ -65,18 +72,21 @@ export const desserts = {
 export const drinks = {
  name: 'drinks',
   id: [ {
+    key: '6we23',
     dish: "Taïwan Beer",
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.monde-selection.com%2Fwp-content%2Fuploads%2F2020%2F05%2F_XT211191.png&f=1&nofb=1&ipt=8d76cbde0ec0baf7d42b00edd4806a2347cfdc67f251d1a6af93906e28b3cebc&ipo=images",
     price: 4.25,
   },
   {
+    key: '4j58k3',
     dish: "Blackburry bubble tea",
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngmart.com%2Ffiles%2F17%2FCold-Bubble-Tea-Transparent-PNG.png&f=1&nofb=1&ipt=da09a20e420abe48c5bca034f9526df70113a7ecc16ebed308849d615906c52f&ipo=images",
     price: 3.75,
   },
   {
+    key: '7t83jwe',
     dish: "Oolong tea",
     imagURL:
       "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F5%2FOolong-Tea-PNG-High-Quality-Image.png&f=1&nofb=1&ipt=c497e55b12861bce51f38cb61af1c912edb366d83ae88cb7c1961221f2afd312&ipo=images",
