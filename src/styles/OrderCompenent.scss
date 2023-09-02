@@ -12,6 +12,9 @@ $tabletBreakPpint: 768px;
         display: block;
 }
 
+.d-none{
+    display: none;
+}
 
 .Order-container{
     width: 100%;
@@ -49,6 +52,7 @@ $tabletBreakPpint: 768px;
         &::after{
              @include title();
         }
+
     }
 
     .SelectedImages{
@@ -140,8 +144,16 @@ $tabletBreakPpint: 768px;
             z-index: -1;
 }
     }
-}
 
+    &--CartHeading{
+        margin-top: 30px;
+
+        &::after{
+
+        @include title;
+    }
+}
+}
 
 @media screen and (max-width: $tabletBreakPpint){
     .SelectedImages{
@@ -166,11 +178,59 @@ $tabletBreakPpint: 768px;
     }
 }
 
+.cart{
+    margin-top: 22px;
+    width: 100%;
+    overflow: auto;
+    max-height: 500px;
+
+
+    &__empty{
+        text-align: center;
+        font-family: italic;
+        font-weight: bold;
+        color: $highlightColor;
+    }   
+
+    &--image{
+        width: 100px!important;
+        height: 100px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+    &--quantity{
+        display: block;
+        background-color: #D9D9D9;
+        padding: 8px;
+        text-align: center;
+        height: 50%;
+        margin: 50% 12px;
+    }
+
+}
+
+.cart-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+.cart--total{
+    display: block;
+    background-color: $background-color;
+    padding: 12px;
+}
 
 table {
   border-collapse: collapse;
   width: 100%;
-  border: none;
+  background-color: $background-color;
+  padding: 12px 20px;
+
 }
 
 th, td {
@@ -179,5 +239,5 @@ th, td {
 }
 
 tr {
-    border: 2px solid $highlightColor;
+    border-bottom: 2px solid #000000;
 }

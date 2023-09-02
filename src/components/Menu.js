@@ -44,10 +44,10 @@ function Menu() {
         ))}
 
     <h3 className="MenuContent--header">Drinks</h3>
-        {drinks.id.map(({ drinkName, imagURL }) => (
+        {drinks.id.map(({ dish, imagURL }) => (
             <div className="MenuContentContainer">
-              <img src={imagURL} alt={drinkName} key={drinkName} className="MenuContent--image" />
-              <h2 className="MenuContent--dishName">{drinkName}</h2>
+              <img src={imagURL} alt={dish} key={dish} className="MenuContent--image" />
+              <h2 className="MenuContent--dishName">{dish}</h2>
             </div>
 
         ))}
