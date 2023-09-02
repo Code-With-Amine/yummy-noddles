@@ -1,3 +1,5 @@
+import Dishes from "./Dishes"
+
 const smallerDishes = (Hovered)=>{
   const dishes = document.querySelectorAll('.SelectedImages-container')
   dishes.forEach((dish) => {
@@ -60,13 +62,7 @@ const ShowSelectedCategory = ({ SelcetCategory, setChosenCat }) => {
     <div className='SelectedImages'>
       {
       SelcetCategory.id.map(({ imagURL, dish, description, price, key}) => (
-        <div className='SelectedImages-container' data-description={description} data-price={price} data-dish={dish} key={key} 
-          onMouseEnter={(event) => ShowDishInfo(event, setChosenCat)}
-        >
-         <div className='SelectedImages__bgColor'></div>
-  
-          <img src={imagURL} alt={dish} className='SelectedImages--DishImage'  key={dish}/>
-        </div>
+        <Dishes imagURL={imagURL}  dish={dish} description = {description} price={price} key={key} ShowDishInfo={ShowDishInfo} setChosenCat={setChosenCat}/>
       ))}
     </div>
   );
